@@ -9,6 +9,9 @@
 	
 	body{
 		margin-top: 70px;
+		background: #333;
+		color: #fff;
+		font-family: arial;
 	}
 
 </style>
@@ -18,16 +21,55 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<h1 class="display-4 text-center">
+				<h1 class="display-4 text-center mb-3">
 					Weight Converter
 				</h1>
 				<form>
 					<div class="form-group">
-						<input type="number" class="form-control form-control-lg" name="weight" placeholder="Enter Pounds...">
+						<input type="number" 
+						id="lbsInput"
+						class="form-control form-control-lg" 
+						name="weight" 
+						placeholder="Enter Pounds...">
 					</div>
 				</form>
+				<div id="output">
+					<div class="card bg-primary mb-2">
+						<div class="card-block">
+							<h4>Grams:</h4>
+							<div id="gramsOutput"></div>
+						</div>
+					</div>
+
+						<div class="card bg-success mb-2">
+						<div class="card-block">
+							<h4>Kilograms:</h4>
+							<div id="kgOutput"></div>
+						</div>
+					</div>
+
+						<div class="card bg-danger mb-2">
+						<div class="card-block">
+							<h4>Ounces:</h4>
+							<div id="ozOutput"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	
+	<script type="text/javascript">
+		
+	document.getElementById('lbsInput').addEventListener('input', function() {
+		// body...
+		console.log("got something");
+	})
+
+	</script>
+
+
+
 </body>
 </html>
